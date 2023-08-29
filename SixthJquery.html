@@ -1,0 +1,70 @@
+<html>
+<!-- This is somme code to animate content (using jQuery)-->
+
+<head>
+    <title>My first jQuery webiste</title>
+
+    <style>
+        #circle {
+            background-color: green;
+            border-radius: 50%;
+            height: 50px;
+            width: 50px;
+            float: left;
+            margin-right: 20px;
+        }
+
+        #square1 {
+            background-color: red;
+            height: 50px;
+            width: 50px;
+            float: left;
+            margin-right: 20px;
+        }
+
+        #square2 {
+            background-color: red;
+            height: 50px;
+            width: 50px;
+            float: left;
+            margin-right: 20px;
+        }
+
+        #square3 {
+            background-color: blue;
+            height: 50px;
+            width: 50px;
+            float: left;
+            margin-right: 20px;
+        }
+    </style>
+    <script type="text/javascript" src="jquery.min.js"></script>
+</head>
+
+<body>
+    <div id="circle"></div>
+    <div id="square1"></div>
+    <div id="square2"></div>
+    <div id="square3"></div>
+
+    <script type="text/javascript">
+        //code that makes the circle larger, changes position and then color immediately after it has finished 
+        // the first animation
+        $("#circle").click(function () {
+            $(this).animate({
+                height: "200px",
+                width: "200px",
+                marginTop: "55px",
+
+            }, 2000, function () {
+                $(this).css("backgroundColor", "yellow", 1000);
+            });
+        })
+
+
+    </script>
+</body>
+
+
+
+</html>
