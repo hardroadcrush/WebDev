@@ -1,0 +1,70 @@
+<html>
+<!-- This is somme code for regular expressions (using jQuery)-->
+
+<head>
+    <title>My first jQuery webiste</title>
+
+    <style>
+        #circle {
+            background-color: green;
+            border-radius: 50%;
+            height: 50px;
+            width: 50px;
+            float: left;
+            margin-right: 20px;
+        }
+
+        #square1 {
+            background-color: red;
+            height: 50px;
+            width: 50px;
+            float: left;
+            margin-right: 20px;
+        }
+
+        #square2 {
+            background-color: red;
+            height: 50px;
+            width: 50px;
+            float: left;
+            margin-right: 20px;
+        }
+
+        #square3 {
+            background-color: blue;
+            height: 50px;
+            width: 50px;
+            float: left;
+            margin-right: 20px;
+        }
+    </style>
+    <script type="text/javascript" src="jquery.min.js"></script>
+</head>
+
+<body>
+    <div id="circle"></div>
+    <div id="square1"></div>
+    <div id="square2"></div>
+    <div id="square3"></div>
+
+    <script type="text/javascript">
+        let regex = /hi/;
+        let string = " bOb ! hi";
+        //does a case sensitive search
+        let result = string.match(regex);
+        alert(result);
+        //does a case insensitive search(ignores cases of both string and regex)
+        let regex2 = /Bob/i;
+        let result2 = string.match(regex2);
+        alert(result2);
+
+        //return every instance of occurence of a regex in the string
+        let regex3 = /b/g;
+        let result3 = string.match(regex3);
+        alert(result3);
+    </script>
+</body>
+
+
+
+</html>

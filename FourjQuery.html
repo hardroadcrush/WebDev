@@ -1,0 +1,73 @@
+<html>
+<!-- This is some code to change website style (using jQuery)-->
+
+<head>
+    <title>My first jQuery webiste</title>
+
+    <style>
+        #circle {
+            background-color: green;
+            border-radius: 50%;
+            height: 50px;
+            width: 50px;
+            float: left;
+            margin-right: 20px;
+        }
+
+        #square1 {
+            background-color: red;
+            height: 50px;
+            width: 50px;
+            float: left;
+            margin-right: 20px;
+        }
+
+        #square2 {
+            background-color: red;
+            height: 50px;
+            width: 50px;
+            float: left;
+            margin-right: 20px;
+        }
+    </style>
+    <script type="text/javascript" src="jquery.min.js"></script>
+</head>
+
+<body>
+    <div id="circle"></div>
+    <div id="square1"></div>
+    <div id="square2"></div>
+
+
+
+
+    <script type="text/javascript">
+        //changes height of circle when it is clicked
+        $("#circle").click(function () {
+            alert("Hello");
+            $("#circle").css("height", "70px")
+        })
+        //returns height of circle when circle is clicked
+        $("#circle").click(function () {
+            alert($("#circle").css("height"))
+        })
+        //returns height of body when circle is clicked
+        $("#circle").click(function () {
+            alert($("body").css("height"))
+        })
+
+        //vanishes the square when it is clicked
+        $("#square1").click(function () {
+            $(this).css("display", "none")
+        })
+
+        //tells wether you clicked on square or a circle
+        $("div").click(function () {
+            alert("You clicked on " + $(this).attr("id"));
+        })
+    </script>
+</body>
+
+
+
+</html>

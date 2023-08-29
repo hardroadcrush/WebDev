@@ -1,0 +1,123 @@
+<html>
+<!-- This is somme code to fade content (using jQuery)-->
+
+<head>
+    <title>My first jQuery webiste</title>
+
+    <style>
+        #circle {
+            background-color: green;
+            border-radius: 50%;
+            height: 50px;
+            width: 50px;
+            float: left;
+            margin-right: 20px;
+        }
+
+        #square1 {
+            background-color: red;
+            height: 50px;
+            width: 50px;
+            float: left;
+            margin-right: 20px;
+        }
+
+        #square2 {
+            background-color: red;
+            height: 50px;
+            width: 50px;
+            float: left;
+            margin-right: 20px;
+        }
+
+        #square3 {
+            background-color: blue;
+            height: 50px;
+            width: 50px;
+            float: left;
+            margin-right: 20px;
+        }
+    </style>
+    <script type="text/javascript" src="jquery.min.js"></script>
+</head>
+
+<body>
+    <div id="circle"></div>
+    <div id="square1"></div>
+    <div id="square2"></div>
+    <div id="square3"></div>
+
+
+    <p id="p1">This is some text duh!</p>
+    <span>This is some better text. Enjoyyy</span>
+    <button id="fade">Fade Out</button>
+
+    <p id="toggleText"> This here is some toggle text</p>
+    <button id="toggle">Toggle</button>
+
+
+    <p id="toggleText2"> This here is some toggle text</p>
+    <button id="toggle2">Toggle</button>
+
+    <script type="text/javascript">
+        //fades out the circle when it is clicked
+        $("#circle").click(function () {
+            $("#circle").fadeOut();
+        })
+        //vanishes the square when it is clicked
+        $("#square1").click(function () {
+            $("#square1").hide();
+        })
+        //slowly fades out the square when it is clicked
+        $("#square2").click(function () {
+            $("#square2").fadeOut("slow");
+        })
+        //square3 fades out slowly when cki==licked and square2 reappears
+        $("#square3").click(function () {
+            $("#square3").fadeOut("slow", function () {
+                $("#square2").show();
+            });
+        })
+
+        //fade out texxt when button is clicked and make some other initially hidden text appear
+
+        $("span").css("display", "none");
+
+        $("#fade").click(function () {
+            $("#p1").fadeOut("slow", function () {
+                $("span").fadeIn("slow")
+            });
+        })
+
+        //a toggle button that makes text disappear or reappear when it is clicked
+        $("#toggleText").css("display", "block");
+
+        $("#toggle").click(function () {
+            if ($("#toggleText").css("display") == "none") {
+                $("#toggleText").css("display", "block");
+            }
+            else if ($("#toggleText").css("display") == "block") {
+                $("#toggleText").css("display", "none");
+            }
+        })
+
+        //another way to toggle text(using a boolean variable)
+
+        var textDisplay = true;
+        $("#toggle2").click(function () {
+            if (textDisplay) {
+                $("#toggleText2").fadeOut();
+                textDisplay = false;
+            }
+            else {
+                $("#toggleText2").fadeOut();
+                textDisplay = true;
+            }
+        }
+        )
+    </script>
+</body>
+
+
+
+</html>
