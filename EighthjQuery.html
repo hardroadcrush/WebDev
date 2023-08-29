@@ -1,28 +1,40 @@
-<html>
-<!-- This is somme code for setting up jqueryUI (using jQuery)-->
+<!doctype html>
+<html lang="en">
 
 <head>
-    <title>My first jQuery webiste</title>
 
-    <style rel="stylesheet" href="jquery-ui-1.13.2.custom/jquery-ui.css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+    <!-- <link rel="stylesheet" href="/resources/demos/style.css"> -->
+    <style>
         #circle {
             background-color: green;
             border-radius: 50%;
-            height: 50px;
-            width: 50px;
+            height: 500px;
+            width: 500px;
             float: left;
             margin-right: 20px;
-        }
-
-        #square1 {
-            background-color: red;
-            height: 50px;
-            width: 50px;
-            float: left;
-            margin-right: 20px;
+            /* make text appear in middle of circle*/
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
     </style>
-    <style rel="stylesheet" href="">
-        <script type="text/javascript" src="jquery-ui-1.13.2.custom/jquery-ui.js"></script><script type="text/javascript" src="jquery.min.js"></script></head><body><div id="circle" class="ui-widget-content"></div><div id="square1"></div><script type="text/javascript">$(function () {
-                $("#circle").draggable();
-            })</script></body></html>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <script>
+        $(function () {
+            $("#circle").draggable();
+        });
+    </script>
+</head>
+
+<body>
+
+    <div id="circle" class="ui-widget-content">
+        <p>Drag me around</p>
+    </div>
+
+
+</body>
+
+</html>
